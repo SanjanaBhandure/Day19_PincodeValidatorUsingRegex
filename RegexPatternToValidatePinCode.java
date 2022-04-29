@@ -1,11 +1,10 @@
 /*
  * The Pin Code Validator program implements an application that needs
  * to ensure all validations in different ways.
- * UC3: Restrict the PIN code from taking alphabets or special characters at the End.
- * Check for 400088B – this should fail
+ * UC4: Make sure 400 088 is also valid along with 400088.
  *
  * @author: Sanjana Bhandure
- * @version: 1.2
+ * @version: 1.3
  * @date: 29-04-2022
  */
 
@@ -23,7 +22,7 @@ public class RegexPatternToValidatePinCode {
 
     }
     public static void main(String[] args) {
-        boolean regexCheck = isValid("^[1-9]{1}[\\d]{5}$","400088B");
+        boolean regexCheck = isValid("^[1-9]{1}[0-9]{2}\\s{0,1}?[0-9]{3}$","400 088");
         System.out.println(regexCheck);
     }
 }
