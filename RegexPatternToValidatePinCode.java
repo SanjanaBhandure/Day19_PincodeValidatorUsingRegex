@@ -1,11 +1,11 @@
 /*
  * The Pin Code Validator program implements an application that needs
  * to ensure all validations in different ways.
- * UC1: Restrict the PIN code from taking alphabets or special characters at the beginning.
- * Check for A400088 – this should fail
+ * UC3: Restrict the PIN code from taking alphabets or special characters at the End.
+ * Check for 400088B – this should fail
  *
  * @author: Sanjana Bhandure
- * @version: 1.1
+ * @version: 1.2
  * @date: 29-04-2022
  */
 
@@ -23,7 +23,7 @@ public class RegexPatternToValidatePinCode {
 
     }
     public static void main(String[] args) {
-        boolean regexCheck = isValid("^[1-9]{1}[\\d]{5}$","A400088");
+        boolean regexCheck = isValid("^[1-9]{1}[\\d]{5}$","400088B");
         System.out.println(regexCheck);
     }
 }
